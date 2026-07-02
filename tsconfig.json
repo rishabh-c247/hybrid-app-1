@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+        // Environment
+        "target": "ESNext",
+        "lib": ["ESNext", "DOM", "DOM.Iterable"],
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+
+        // Path aliases
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./resources/js/*"]
+        },
+
+        // Output
+        "noEmit": true,
+        "sourceMap": true,
+
+        // React
+        "jsx": "react-jsx",
+
+        // Strictness
+        "strict": true,
+        "noUncheckedIndexedAccess": true,
+        "forceConsistentCasingInFileNames": true,
+
+        // Module behaviour
+        "verbatimModuleSyntax": true,
+        "isolatedModules": true,
+        "noUncheckedSideEffectImports": true,
+        "moduleDetection": "force",
+        "skipLibCheck": true
+    },
+    "include": ["resources/js/**/*"],
+    "exclude": ["node_modules", "vendor", "public"]
+}

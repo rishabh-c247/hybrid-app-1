@@ -1,0 +1,56 @@
+{
+    "$schema": "https://www.schemastore.org/package.json",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "vite build",
+        "build:mobile": "vite build --config vite.config.mobile.js",
+        "dev": "vite"
+    },
+    "devDependencies": {
+        "@capacitor/cli": "^7.6.7",
+        "@eslint/js": "^10.0.1",
+        "@tailwindcss/vite": "^4.0.0",
+        "@types/react": "^19.2.17",
+        "@types/react-dom": "^19.2.3",
+        "@vitejs/plugin-react": "^6.0.3",
+        "concurrently": "^9.0.1",
+        "eslint": "^10.6.0",
+        "eslint-plugin-react-hooks": "^7.1.1",
+        "eslint-plugin-react-refresh": "^0.5.3",
+        "laravel-vite-plugin": "^3.1",
+        "prettier": "^3.9.4",
+        "tailwindcss": "^4.0.0",
+        "typescript": "^6.0.3",
+        "typescript-eslint": "^8.62.1",
+        "vite": "^8.0.0"
+    },
+    "dependencies": {
+        "@capacitor/app": "^8.1.0",
+        "@capacitor/core": "^8.4.1",
+        "@capacitor/haptics": "^8.0.2",
+        "@capacitor/keyboard": "^8.0.5",
+        "@capacitor/network": "^8.0.1",
+        "@capacitor/preferences": "^8.0.1",
+        "@capacitor/splash-screen": "^8.0.1",
+        "@capacitor/status-bar": "^8.0.2",
+        "@hookform/resolvers": "^5.4.0",
+        "@tanstack/react-query": "^5.101.2",
+        "axios": "^1.18.1",
+        "class-variance-authority": "^0.7.1",
+        "clsx": "^2.1.1",
+        "lucide-react": "^1.23.0",
+        "radix-ui": "^1.6.1",
+        "react": "^19.2.7",
+        "react-dom": "^19.2.7",
+        "react-hook-form": "^7.80.0",
+        "react-router-dom": "^7.18.1",
+        "sonner": "^2.0.7",
+        "tailwind-merge": "^3.6.0",
+        "zod": "^4.4.3",
+        "zustand": "^5.0.14"
+    },
+    "optionalDependencies": {
+        "@rolldown/binding-linux-x64-gnu": "^1.1.4"
+    }
+}
