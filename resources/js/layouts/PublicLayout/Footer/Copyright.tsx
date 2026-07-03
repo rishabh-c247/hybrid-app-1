@@ -52,7 +52,7 @@ export default function Copyright() {
     const year = new Date().getFullYear();
 
     return (
-        <div className="border-t border-border/60">
+        <div className="border-t border-border/60 bg-white dark:bg-card">
             <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
                 <p className="text-sm text-muted-foreground">
                     &copy; {year} Hybrid Inc. All rights reserved.
