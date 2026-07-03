@@ -1,44 +1,43 @@
 import { Layers } from 'lucide-react';
-import { Button } from '@/shared/components/ui/button';
 
 export default function HomePage() {
     return (
-        <div className="bg-background flex min-h-screen flex-col">
-            {/* Top decorative bar */}
-            <div className="bg-primary h-1 w-full" />
+        <div className="flex min-h-screen flex-col bg-background">
+            <div className="h-1 w-full bg-primary" />
 
-            {/* Main content */}
             <div className="flex flex-1 flex-col items-center justify-center px-6 py-16 text-center">
-                {/* Logo */}
-                <div className="bg-primary/10 mb-8 flex h-20 w-20 items-center justify-center rounded-2xl">
-                    <Layers className="text-primary h-10 w-10" strokeWidth={1.5} />
+                <div className="mb-8 flex h-20 w-20 items-center justify-center rounded-2xl bg-primary/10">
+                    <Layers className="h-10 w-10 text-primary" strokeWidth={1.5} />
                 </div>
 
-                {/* Heading */}
-                <h1 className="text-foreground mb-3 text-4xl font-bold tracking-tight">
+                <h1 className="mb-3 text-4xl font-bold tracking-tight text-foreground">
                     Hybrid App
                 </h1>
 
-                {/* Tagline */}
-                <p className="text-muted-foreground mb-12 max-w-sm text-base leading-relaxed">
-                    A modern, cross-platform application built for web, mobile, and everything in between.
+                <p className="mb-12 max-w-sm text-base leading-relaxed text-muted-foreground">
+                    A modern, cross-platform application built for web, mobile, and everything in
+                    between.
                 </p>
 
-                {/* Actions */}
                 <div className="flex w-full max-w-xs flex-col gap-3">
-                    <Button size="lg" className="w-full">
+                    <button
+                        type="button"
+                        className="inline-flex h-10 w-full items-center justify-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+                    >
                         Get Started
-                    </Button>
+                    </button>
 
-                    <Button size="lg" variant="outline" className="w-full">
+                    <button
+                        type="button"
+                        className="inline-flex h-10 w-full items-center justify-center rounded-md border border-border bg-background px-6 text-sm font-medium text-foreground shadow-xs transition-colors hover:bg-accent hover:text-accent-foreground"
+                    >
                         Sign In
-                    </Button>
+                    </button>
                 </div>
             </div>
 
-            {/* Footer */}
             <footer className="py-6 text-center">
-                <p className="text-muted-foreground text-xs">
+                <p className="text-xs text-muted-foreground">
                     &copy; {new Date().getFullYear()} Hybrid App. All rights reserved.
                 </p>
             </footer>
