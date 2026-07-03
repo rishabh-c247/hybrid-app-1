@@ -1,6 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import App from './App';
+import AppRoot from './AppRoot';
 import { bootstrapCapacitor } from '@/core/capacitor/bootstrap';
 import { getPlatform } from '@/core/platform';
 import { applyTheme, getSystemTheme } from '@/core/theme/apply-theme';
@@ -50,6 +50,6 @@ if (!root) {
 
 createRoot(root).render(
     <StrictMode>
-        <App />
+        <AppRoot />
     </StrictMode>,
 );

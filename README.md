@@ -201,7 +201,7 @@ React lives inside Laravel. It is not a separate application.
 ```
 resources/js/
 ├── app.tsx                 # Entry point — mounts React
-├── App.tsx                 # Providers → Router → Layouts → Pages
+├── AppRoot.tsx             # Providers → Router → Layouts → Pages
 ├── core/                   # Application infrastructure
 ├── shared/                 # Reusable UI (no business logic)
 ├── providers/              # App-wide service providers
