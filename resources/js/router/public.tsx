@@ -1,5 +1,5 @@
 import { Route } from 'react-router-dom';
-import HomePage from '@/modules/dashboard/pages/HomePage';
+import HomePage from '@/modules/home/pages/HomePage';
 
 const publicRoutes = (
     <>

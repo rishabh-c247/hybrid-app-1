@@ -4,7 +4,7 @@
 @source '../../storage/framework/views/*.php';
 
 @theme inline {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 
     /* shadcn/ui semantic color tokens */
@@ -32,74 +32,105 @@
     --color-chart-3: var(--chart-3);
     --color-chart-4: var(--chart-4);
     --color-chart-5: var(--chart-5);
+    --color-sidebar: var(--sidebar);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-nav-active: var(--nav-active);
+    --color-nav-active-foreground: var(--nav-active-foreground);
+    --color-success: var(--success);
+    --color-warning: var(--warning);
+    --color-info: var(--info);
     --radius-sm: calc(var(--radius) - 4px);
     --radius-md: calc(var(--radius) - 2px);
     --radius-lg: var(--radius);
     --radius-xl: calc(var(--radius) + 4px);
+    --radius-card: 0.875rem;
 }
 
 @layer base {
     :root {
-        --background: oklch(1 0 0);
-        --foreground: oklch(0.145 0 0);
-        --card: oklch(1 0 0);
-        --card-foreground: oklch(0.145 0 0);
-        --popover: oklch(1 0 0);
-        --popover-foreground: oklch(0.145 0 0);
-        --primary: oklch(0.205 0 0);
-        --primary-foreground: oklch(0.985 0 0);
-        --secondary: oklch(0.97 0 0);
-        --secondary-foreground: oklch(0.205 0 0);
-        --muted: oklch(0.97 0 0);
-        --muted-foreground: oklch(0.556 0 0);
-        --accent: oklch(0.97 0 0);
-        --accent-foreground: oklch(0.205 0 0);
-        --destructive: oklch(0.577 0.245 27.325);
-        --destructive-foreground: oklch(0.985 0 0);
-        --border: oklch(0.922 0 0);
-        --input: oklch(0.922 0 0);
-        --ring: oklch(0.708 0 0);
+        --background: #fafafc;
+        --foreground: #18181b;
+        --card: #ffffff;
+        --card-foreground: #18181b;
+        --popover: #ffffff;
+        --popover-foreground: #18181b;
+        --primary: #7c3aed;
+        --primary-foreground: #ffffff;
+        --secondary: #f6f5fb;
+        --secondary-foreground: #18181b;
+        --muted: #f4f4f5;
+        --muted-foreground: #71717a;
+        --accent: #f3e8ff;
+        --accent-foreground: #6d28d9;
+        --destructive: #ef4444;
+        --destructive-foreground: #ffffff;
+        --border: #e4e4e7;
+        --input: #e4e4e7;
+        --ring: #7c3aed;
         --radius: 0.625rem;
-        --chart-1: oklch(0.646 0.222 41.116);
-        --chart-2: oklch(0.6 0.118 184.704);
-        --chart-3: oklch(0.398 0.07 227.392);
-        --chart-4: oklch(0.828 0.189 84.429);
-        --chart-5: oklch(0.769 0.188 70.08);
+        --sidebar: #f6f5fb;
+        --sidebar-foreground: #18181b;
+        --nav-active: #f3e8ff;
+        --nav-active-foreground: #6d28d9;
+        --success: #22c55e;
+        --warning: #f59e0b;
+        --info: #3b82f6;
+        --chart-1: #7c3aed;
+        --chart-2: #6d28d9;
+        --chart-3: #5b21b6;
+        --chart-4: #a78bfa;
+        --chart-5: #c4b5fd;
     }
 
     .dark {
-        --background: oklch(0.145 0 0);
-        --foreground: oklch(0.985 0 0);
-        --card: oklch(0.205 0 0);
-        --card-foreground: oklch(0.985 0 0);
-        --popover: oklch(0.205 0 0);
-        --popover-foreground: oklch(0.985 0 0);
-        --primary: oklch(0.985 0 0);
-        --primary-foreground: oklch(0.205 0 0);
-        --secondary: oklch(0.269 0 0);
-        --secondary-foreground: oklch(0.985 0 0);
-        --muted: oklch(0.269 0 0);
-        --muted-foreground: oklch(0.708 0 0);
-        --accent: oklch(0.269 0 0);
-        --accent-foreground: oklch(0.985 0 0);
-        --destructive: oklch(0.704 0.191 22.216);
-        --destructive-foreground: oklch(0.985 0 0);
-        --border: oklch(1 0 0 / 10%);
-        --input: oklch(1 0 0 / 15%);
-        --ring: oklch(0.556 0 0);
-        --chart-1: oklch(0.488 0.243 264.376);
-        --chart-2: oklch(0.696 0.17 162.48);
-        --chart-3: oklch(0.769 0.188 70.08);
-        --chart-4: oklch(0.627 0.265 303.9);
-        --chart-5: oklch(0.645 0.246 16.439);
+        --background: #09090b;
+        --foreground: #fafafa;
+        --card: #18181b;
+        --card-foreground: #fafafa;
+        --popover: #111114;
+        --popover-foreground: #fafafa;
+        --primary: #7c3aed;
+        --primary-foreground: #ffffff;
+        --secondary: #27272a;
+        --secondary-foreground: #fafafa;
+        --muted: #27272a;
+        --muted-foreground: #a1a1aa;
+        --accent: rgba(139, 92, 246, 0.18);
+        --accent-foreground: #c4b5fd;
+        --destructive: #ef4444;
+        --destructive-foreground: #ffffff;
+        --border: #27272a;
+        --input: #27272a;
+        --ring: #7c3aed;
+        --sidebar: #101014;
+        --sidebar-foreground: #fafafa;
+        --nav-active: rgba(139, 92, 246, 0.18);
+        --nav-active-foreground: #c4b5fd;
+        --success: #22c55e;
+        --warning: #f59e0b;
+        --info: #3b82f6;
+        --chart-1: #a78bfa;
+        --chart-2: #8b5cf6;
+        --chart-3: #7c3aed;
+        --chart-4: #6d28d9;
+        --chart-5: #c4b5fd;
     }
 
     * {
         @apply border-border outline-ring/50;
     }
 
+    html {
+        color-scheme: light;
+        scroll-behavior: smooth;
+    }
+
+    html.dark {
+        color-scheme: dark;
+    }
+
     body {
-        @apply bg-background text-foreground;
+        @apply bg-background text-foreground font-sans antialiased;
     }
 
     /* ── Safe-area & keyboard insets (Capacitor / PWA) ── */
@@ -108,17 +139,20 @@
         --safe-area-right: env(safe-area-inset-right, 0px);
         --safe-area-bottom: env(safe-area-inset-bottom, 0px);
         --safe-area-left: env(safe-area-inset-left, 0px);
-
-        /* Updated at runtime by the Keyboard plugin listener */
         --keyboard-height: 0px;
     }
 
-    /* Capacitor native shell: honour notch / home indicator */
     .capacitor-android body,
     .capacitor-ios body {
         padding-top: var(--safe-area-top);
         padding-bottom: var(--safe-area-bottom);
         padding-left: var(--safe-area-left);
         padding-right: var(--safe-area-right);
+    }
+}
+
+@layer utilities {
+    .transition-theme {
+        @apply transition-colors duration-300 ease-in-out;
     }
 }

@@ -3,6 +3,26 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 import { bootstrapCapacitor } from '@/core/capacitor/bootstrap';
 import { getPlatform } from '@/core/capacitor/platform';
+import { applyTheme, getSystemTheme } from '@/core/theme/apply-theme';
+import { THEME_STORAGE_KEY, type Theme } from '@/core/theme/constants';
+
+function initTheme(): void {
+    try {
+        const raw = localStorage.getItem(THEME_STORAGE_KEY);
+
+        if (!raw) {
+            return;
+        }
+
+        const parsed = JSON.parse(raw) as { state?: { theme?: Theme } };
+        const theme = parsed.state?.theme ?? 'system';
+        applyTheme(theme === 'system' ? getSystemTheme() : theme);
+    } catch {
+        // Ignore malformed storage entries
+    }
+}
+
+initTheme();
 
 // ── Service Worker (PWA) ───────────────────────────────────────────────────────
 // Registered only on web; Capacitor native serves assets from disk.

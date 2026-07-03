@@ -11,7 +11,7 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <meta name="apple-mobile-web-app-title" content="{{ config('app.name', 'Hybrid App') }}">
-        <meta name="theme-color" content="#0f0f0f">
+        <meta name="theme-color" content="#7C3AED">
 
         {{-- Apple Touch Icons --}}
         <link rel="apple-touch-icon" sizes="152x152" href="/icons/icon-152.png">
@@ -19,6 +19,7 @@
         <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192.png">
 
         {{-- Favicon --}}
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg">
         <link rel="icon" type="image/png" sizes="96x96" href="/icons/icon-96.png">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
