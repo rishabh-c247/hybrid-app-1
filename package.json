@@ -5,10 +5,15 @@
     "scripts": {
         "build": "vite build",
         "build:mobile": "vite build --config vite.config.mobile.js",
+        "cap:sync": "npm run build:mobile && npx cap sync",
+        "cap:android": "npx cap open android",
+        "cap:ios": "npx cap open ios",
         "dev": "vite"
     },
     "devDependencies": {
+        "@capacitor/android": "^8.4.1",
         "@capacitor/cli": "^7.6.7",
+        "@capacitor/ios": "^8.4.1",
         "@eslint/js": "^10.0.1",
         "@tailwindcss/vite": "^4.0.0",
         "@types/react": "^19.2.17",

@@ -1,0 +1,22 @@
+{
+    "iconBackgroundColor": "#7C3AED",
+    "iconBackgroundColorDark": "#0f0f0f",
+    "splashBackgroundColor": "#0f0f0f",
+    "splashBackgroundColorDark": "#0f0f0f",
+    "android": {
+        "icon": {
+            "sources": ["resources/capacitor/icon.svg"]
+        },
+        "splash": {
+            "sources": ["resources/capacitor/splash.svg"]
+        }
+    },
+    "ios": {
+        "icon": {
+            "sources": ["resources/capacitor/icon.svg"]
+        },
+        "splash": {
+            "sources": ["resources/capacitor/splash.svg"]
+        }
+    }
+}

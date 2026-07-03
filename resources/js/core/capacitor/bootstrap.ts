@@ -1,3 +1,4 @@
+import { statusBarConfig } from './native-ui.config';
 import { isNative, isAndroid, isIos } from './platform';
 
 /**
@@ -20,13 +21,13 @@ async function setupStatusBar(): Promise<void> {
 
     if (isIos()) {
         await StatusBar.setStyle({ style: Style.Default });
-        await StatusBar.setOverlaysWebView({ overlay: false });
+        await StatusBar.setOverlaysWebView({ overlay: statusBarConfig.ios.overlaysWebView });
     }
 
     if (isAndroid()) {
         await StatusBar.setStyle({ style: Style.Dark });
-        await StatusBar.setBackgroundColor({ color: '#0f0f0f' });
-        await StatusBar.setOverlaysWebView({ overlay: false });
+        await StatusBar.setBackgroundColor({ color: statusBarConfig.android.backgroundColor });
+        await StatusBar.setOverlaysWebView({ overlay: statusBarConfig.android.overlaysWebView });
     }
 }
 

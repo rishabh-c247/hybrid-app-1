@@ -2,7 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
 import { bootstrapCapacitor } from '@/core/capacitor/bootstrap';
-import { getPlatform } from '@/core/capacitor/platform';
+import { getPlatform } from '@/core/platform';
 import { applyTheme, getSystemTheme } from '@/core/theme/apply-theme';
 import { THEME_STORAGE_KEY, type Theme } from '@/core/theme/constants';
 

@@ -1,13 +1,17 @@
 import { ArrowLeft, Home } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
+import MobileLayout from '@/layouts/MobileLayout/MobileLayout';
 import PublicLayout from '@/layouts/PublicLayout/PublicLayout';
 import { Button } from '@/shared/components/ui/button';
+import { usePlatform } from '@/shared/hooks/use-platform';
 import { cn } from '@/shared/utils/utils';
 
 const staggerDelays = ['delay-[0ms]', 'delay-[120ms]', 'delay-[240ms]', 'delay-[360ms]', 'delay-[480ms]'];
 
 export default function NotFoundPage() {
     const navigate = useNavigate();
+    const { isMobileApp } = usePlatform();
+    const Layout = isMobileApp ? MobileLayout : PublicLayout;
 
     const handleGoBack = (): void => {
         if (window.history.length > 1) {
@@ -19,8 +23,13 @@ export default function NotFoundPage() {
     };
 
     return (
-        <PublicLayout>
-            <section className="relative flex min-h-[calc(100vh-12rem)] flex-1 flex-col items-center justify-center overflow-hidden px-4 py-20 sm:px-6 sm:py-28">
+        <Layout>
+            <section
+                className={cn(
+                    'relative flex flex-1 flex-col items-center justify-center overflow-hidden px-4 py-20 sm:px-6 sm:py-28',
+                    isMobileApp ? 'min-h-full' : 'min-h-[calc(100vh-12rem)]',
+                )}
+            >
                 {/* Ambient background — soft aurora gradient, no scaling blobs */}
                 <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
                     <div
@@ -123,6 +132,6 @@ export default function NotFoundPage() {
                     </div>
                 </div>
             </section>
-        </PublicLayout>
+        </Layout>
     );
 }
